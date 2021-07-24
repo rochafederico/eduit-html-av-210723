@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio y video</title>
+</head>
+<body>
+    <!-- <audio controls autoplay muted loop>
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mp3">
+    </audio> -->
+    <video>
+        <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        <!-- <track src="subtitu-es.vtt" lang="es-AR">
+        <track src="subtitu-en.vtt" lang="en" > -->
+        <track src="subtitu-en.vtt" >
+    </video>
+    <button onclick="palancaVideo()">
+        play/pausa
+    </button>
+    <button onclick="bajarVolumen()">
+        Bajar volumen
+    </button>
+    <button onclick="subirVolumen()">
+        Subir volumen
+    </button>
+    <button onclick="lento()">
+        mas lendo
+    </button>
+    <button onclick="rapido()">
+        mas rapido
+    </button>
+    <script>
+
+    var video = document.querySelector('video');
+        function palancaVideo() {
+            if(video.paused) {
+                video.play()
+            } else {
+                video.pause()
+            }
+        }
+
+        function bajarVolumen() {
+            if(video.volume > 0) {
+                video.volume = video.volume - 0.1;
+            }
+            console.log(video.volume)
+        }
+        function subirVolumen() {
+            if(video.volume < 1) {
+                video.volume = video.volume + 0.1;
+            }
+            console.log(video.volume)
+        }
+
+        function lento(){
+            if(video.playbackRate > 0) {
+                video.playbackRate = video.playbackRate  - 0.2;
+            }
+            console.log(video.playbackRate)
+        }
+        function rapido(){
+            video.playbackRate = video.playbackRate  + 0.2;
+            console.log(video.playbackRate)
+        }
+    </script>
+</body>
+</html>

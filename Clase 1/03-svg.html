@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG (vector)</title>
+    <style>
+        svg rect {
+            fill: green;
+        }
+
+        svg circle {
+            stroke-width: 12px;
+            box-shadow: 0 0 10px 10px block;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="miarchiv.svg">
+    <svg height="1000" width="1000">
+        <g id="mi-vector">
+            <rect width="100" height="100" x="20" y="10" rx="20" ry="50"></rect>
+            <circle cx="100" cy="100" r="60" fill="greenyellow" stroke="black"></circle>
+            <ellipse ry="20" rx="100"></ellipse>
+            <line x1="10" y1="10" x2="100" y2="100" stroke="red"></line>
+            <polyline points="10,10 10,40 40,40 40,80 80,80 80,120" style="stroke: blue;fill: transparent;"></polyline>
+
+            <a href="http://educacionit.com">
+                <text x="200" y="20">Educacion IT</text>
+            </a>
+        </g>
+    </svg>
+</body>
+
+</html>
