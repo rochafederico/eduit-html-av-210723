@@ -1,0 +1,16 @@
+@import "_variables";
+// @import 'variables.less';
+@import "_botones";
+
+.boton-principal {
+  #botones.boton(tor, #variables[primario]);
+}
+
+@colores: {
+    primario: blue;
+    secundario: green;
+}
+
+each(@colores, {
+    #botones.boton(@key, @value);
+})

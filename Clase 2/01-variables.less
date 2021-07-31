@@ -1,0 +1,47 @@
+@ancho: 300px;
+@alto: @ancho * (1 / 4 * 3);
+
+body {
+    width: @alto;
+    height: @ancho;
+}
+
+// @alto: 20px; CUIDADO
+
+@link-color: red;
+a {
+    color: @link-color;
+}
+a:hover {
+    @link-color-hover: darken(@link-color, 10%);
+
+    color: @link-color-hover;
+}
+
+@uno: 'Titulo';
+@dos: 'unido';
+
+// @texto: 'asdkjfhaskd @{uno} akdsjfaksjdhf';
+@texto: '@{uno} @{dos}';
+
+body::before {
+    content: @texto;
+}
+
+@mi-selector: su-selector;
+
+.@{mi-selector} {
+    color: greenyellow;
+}
+#@{mi-selector} {
+    color: greenyellow;
+}
+
+// @url-base-multimedia: '/img/multimedia/';
+@url-base-multimedia: 'http://educacion.it/archivos/';
+
+.fondo {
+    background: url('@{url-base-multimedia}fondo.png');
+}
+
+@lista: none, calc(100% - 10px), algo;

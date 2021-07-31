@@ -1,0 +1,48 @@
+// main {....}
+// main > section {...}
+// main > section > header,
+// main > section > h1,
+// main > section > h2,
+// main > section > h3,
+// main > section > h4,
+// main > section > h5,
+// main > section > h6 {
+    
+// }
+
+main {
+    color: red;
+    display: felx;
+    > section {
+        padding: 20px;
+        @media (min-width: 120px) {
+            width: 100px;
+        }
+        @media (min-width: 120px) {
+           header {
+               color: greenyellow;
+           }
+        }
+        > header,
+        > h1,
+        > h2,
+        > h3,
+        > h4 {
+            text-decoration: underline;
+            @media screen {
+                color: blue;
+            }
+        }
+    }
+}
+
+
+@link-color: red;
+a {
+    color: @link-color;
+    &:hover {
+        @link-color-hover: darken(@link-color, 10%);
+    
+        color: @link-color-hover;
+    }
+}

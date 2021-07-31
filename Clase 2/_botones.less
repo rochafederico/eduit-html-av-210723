@@ -1,0 +1,10 @@
+#botones() {
+  .boton(@name, @color: red) {
+    .btn-@{name} {
+      display: block;
+      &:hover {
+        color: hsl(hue(@color), 10%, 20%);
+      }
+    }
+  }
+}

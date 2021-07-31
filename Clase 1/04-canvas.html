@@ -8,5 +8,27 @@
 </head>
 <body>
     <canvas height="200" width="200"></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        var contexto = canvas.getContext("2d") // webgl, webgl2, bitmaprender
+        
+        // rectangulo
+        contexto.fillStyle = "#000";
+        contexto.fillRect(5,5, 190, 190);
+
+        // texto
+        contexto.fillStyle = "#fff";
+        contexto.font = "20px Arial"
+        contexto.textAlign = "center";
+        contexto.fillText("Educacion IT", 100, 50);
+
+        // linea
+        contexto.moveTo(0, 90);
+        contexto.lineTo(200, 90);
+        contexto.moveTo(0, 10);
+        contexto.lineTo(200, 10);
+        contexto.strokeStyle = "red";
+        contexto.stroke();
+    </script>
 </body>
 </html>

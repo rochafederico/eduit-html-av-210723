@@ -1,0 +1,28 @@
+// .borde-negro {
+//     border: 1px solid black;
+// }
+
+.borde-negro() {
+  border: 1px solid black;
+}
+
+.borde-redondedos(@radius: 2px) {
+  -webkit-boerder-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  &:hover {
+    @radius-hover: @radius * 2;
+    -webkit-boerder-radius: @radius-hover;
+    -moz-border-radius: @radius-hover;
+    border-radius: @radius-hover;
+  }
+}
+
+button {
+  .borde-negro() !important;
+  .borde-redondedos();
+}
+
+a {
+  .borde-redondedos(5px);
+}
