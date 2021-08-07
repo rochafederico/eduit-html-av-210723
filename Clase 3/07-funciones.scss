@@ -1,0 +1,34 @@
+@function sumar($nro1, $nro2, $otro: none) {
+    // + - * %
+    $resultado: $nro1 + $nro2;
+
+    @if($otro != left or $otro != right or $otro != none) {
+        @error "$otro tiene que ser left right o none";
+    }
+
+    // > < >= <= != ==
+    @debug $resultado;
+    @if ($resultado > 10px) {
+        // @error "El resultado es mayor que 10px";
+        @warn "El resultado es mayor que 10px";
+        @return 10px;
+    }
+
+    @return $resultado;
+}
+
+@debug red == #f00;
+@debug (2px solid red) == (3px dashed blue);
+@debug null;
+
+
+// & (and) | (or)
+$numero: 11;
+@debug ($numero > 0) and ($numero < 10);
+@debug ($numero > 0) or ($numero < 10);
+
+@debug ($numero > 0) and ($numero < 10 or $numero > 20);
+
+.algo {
+    border-width: sumar(2px, 2cm);
+}

@@ -1,0 +1,10 @@
+nav ul, main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  color: grey;
+}
+
+/*# sourceMappingURL=05-herencia.css.map */

@@ -1,0 +1,18 @@
+$color: red;// rgba, hsl, hexa con alpha
+$texto: "algo";
+$lista: red blue greenyellow 200px;
+$borde: 1px solid red;
+$numero: 123.12; // 12px, 12cm, cualquier medida de css
+
+$varible_global: "";
+
+.algo {
+    $variable-local: red;
+
+    // genera variable local y se borra al salir
+    $varible_global: "333";
+}
+
+
+// reemplaza valor
+$varible_global: "222";

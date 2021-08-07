@@ -1,0 +1,17 @@
+/* Error: "$otro tiene que ser left right o none"
+ *    ,
+ * 33 |     border-width: sumar(2px, 2cm);
+ *    |                   ^^^^^^^^^^^^^^^
+ *    '
+ *   07-funciones.scss 33:19  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: "$otro tiene que ser left right o none"\a    \2577 \a 33 \2502      border-width: sumar(2px, 2cm);\a    \2502                    ^^^^^^^^^^^^^^^\a    \2575 \a   07-funciones.scss 33:19  root stylesheet';
+}

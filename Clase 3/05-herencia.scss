@@ -1,0 +1,23 @@
+$variable: flex;
+
+%flex-con-wrap {
+    display: $variable;
+    flex-wrap: wrap;
+}
+nav ul, main, footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+main {
+    color: grey;
+    @extend %flex-con-wrap;
+}
+
+nav ul {
+    @extend %flex-con-wrap;
+}
+
+footer {
+    @extend %flex-con-wrap;
+}

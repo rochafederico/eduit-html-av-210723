@@ -1,0 +1,14 @@
+$algo: "otro-algo";
+
+// selector con interpolacion
+.btn-#{$algo} {
+    color: red;
+}
+
+$prop: display;
+$valor: flex;
+
+.grid {
+    // background-#{$miprop}: ;
+    #{$prop}: inline-#{$valor};
+}

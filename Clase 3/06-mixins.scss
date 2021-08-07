@@ -1,0 +1,40 @@
+@mixin borde-negro  {
+    border: 1px solid black;
+    @include borde-redondeado();
+}
+
+@mixin boton($name, $color) {
+    .btn-#{$name} {
+        background-color: $color;
+        &:hover {
+            background-color: darken($color,10%);
+        }
+    }
+}
+
+$filters: ms moz webkit o;
+@mixin completar-filtros($prop, $valor) {
+    @each $filtro in $filters {
+        -#{$filtro}-#{$prop}: $valor;
+    }
+}
+
+@mixin borde-redondeado($radius: 5px) {
+    @include completar-filtros(border-radius, $radius);
+    border-radius: $radius;
+}
+
+header {
+    @include completar-filtros(flex-direction, row);
+    flex-direction: row;
+    @include borde-negro();
+}
+
+
+$color-primario: red;
+nav {
+    @include borde-redondeado(10px);
+    a {
+        @include boton(nav, $color-primario);
+    }
+}

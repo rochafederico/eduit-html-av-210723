@@ -1,0 +1,17 @@
+main {
+  display: flex;
+}
+main > section {
+  width: 50%;
+}
+main > section a {
+  color: blue;
+}
+main > section a:hover {
+  color: red;
+}
+main > section a::before {
+  content: "Algo";
+}
+
+/*# sourceMappingURL=04-animacion.css.map */

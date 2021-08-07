@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use 'libreria' as milib;
+
+$mi-map: (
+    // "primario": ("algo":greenyellow),
+    "primario": greenyellow,
+    "error": red,
+    info: blue
+);
+
+@debug $mi-map;
+@debug map-get($mi-map, "info");
+@debug map.set($mi-map, "otro", brown);
+@debug map.set($mi-map, "info", #0f0);
+
+@debug milib.algo();
+
+@each $name, $var in $mi-map {
+    a.#{$name} {
+        color: $var;
+    }
+}
+
+// @for $index from 1 to list-length($mi-map) {
+//     .
+// }
+$columnas: 16;
+@for $index from 0 to $columnas {
+    $columna: $index + 1;
+    .col-#{$columna} {
+        width: 100% / $columnas * $columna;
+    }
+}
+
+$count: 1;
+@while $count <= $columnas {
+    .col-#{$count} {
+        width: 100% / $columnas * $count;
+    }
+    $count: $count + 1;
+}

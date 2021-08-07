@@ -1,0 +1,8 @@
+@use 'libreria' as milib;
+@import 'partial';
+
+a {
+    content: $variable;
+    color: milib.$color;
+}
+// milib.body

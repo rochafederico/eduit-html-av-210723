@@ -1,0 +1,9 @@
+$color: greenyellow;
+
+body {
+    color: $color;
+}
+
+@function algo(){
+    @return 2;
+}
