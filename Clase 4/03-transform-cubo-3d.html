@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo</title>
+    <link rel="stylesheet" href="03-transform-cubo-3d.css">
+</head>
+<body>
+    <div class="caja">
+        <div class="cubo">
+            <div class="cara atras">
+                <img data-v-2e8c6b3a="" src="https://api.alumni.education/assets/img/course/268.svg" width="60">
+            </div>
+            <div class="cara izquierda"></div>
+            <div class="cara abajo"></div>
+            <div class="cara adelante"></div>
+            <div class="cara derecha"></div>
+            <div class="cara arriba"></div>
+        </div>
+    </div>
+
+    <script>
+        var grado = 0;
+
+        setInterval(() => {
+            grado++;
+
+            var cubo = document.querySelector('.cubo');
+            // cubo.style.backgroundColor = 'red';
+            cubo.style.transform = "rotateY(" + grado + "deg) rotateX(" + grado + "deg)";
+            if(grado >= 360){
+                grado = 0;
+            }
+        }, 100);
+    </script>
+</body>
+</html>

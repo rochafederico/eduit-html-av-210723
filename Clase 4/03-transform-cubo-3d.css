@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caja {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 400px;
+    margin: 0 auto;
+}
+
+.cubo {
+    transform-style: preserve-3d;
+}
+
+.cara {
+    border: 2px solid red;
+    opacity: .5;
+}
+
+.cara, .cubo  {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.atras {
+    background: brown;
+    transform: translateZ(-100px);
+}
+
+.adelante {
+    background: cadetblue;
+    transform: translateZ(100px);
+}
+
+.izquierda {
+    background: chocolate;
+    transform: rotateY(90deg) translateZ(-100px);
+}
+
+.derecha {
+    background: chocolate;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.arriba {
+    background: chocolate;
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.abajo {
+    background: chocolate;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+

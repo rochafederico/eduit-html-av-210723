@@ -1,0 +1,24 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cajita {
+    width: 200px;
+    height: 100px;
+    background-color: greenyellow;
+    box-sizing: border-box;
+}
+.cajita {
+    /* transform: rotateY(45deg); */
+    transform:
+        rotate3d(1,1,0,60deg)
+        translateZ(100px);
+}
+
+.contenedor {
+    perspective: 400px;
+    /* perspective-origin: ; */
+}

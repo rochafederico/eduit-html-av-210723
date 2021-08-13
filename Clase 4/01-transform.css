@@ -1,0 +1,64 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cajita {
+    width: 200px;
+    height: 100px;
+    background-color: greenyellow;
+    box-sizing: border-box;
+}
+
+.cajita:hover {
+    border: 1px solid black;
+}
+
+.cajita:nth-child(1):hover {
+    transform: translate(30px, 30px);
+}
+
+.cajita:nth-child(2):hover {
+    transform: translateX(-30px);
+}
+
+.cajita:nth-child(3):hover {
+    transform: translateY(-30px);
+}
+
+.cajita:nth-child(4):hover {
+    /* transform: translateY(230px) rotate(45deg); */
+    transform: rotate(-45deg);
+    transform-origin: right bottom;
+}
+
+.cajita:nth-child(5):hover {
+    /* transform: scale(2); */
+    transform: scale(1.6); /* 0.1 .1 */
+}
+
+.cajita:nth-child(6):hover {
+    transform: scaleX(1.6);
+}
+
+.cajita:nth-child(7):hover {
+    transform: scaleY(1.6);
+}
+
+.cajita:nth-child(8):hover {
+    transform: skew(20deg, 20deg);
+}
+
+.cajita:nth-child(9):hover {
+    transform: skewX(20deg);
+}
+
+.cajita:nth-child(10):hover {
+    transform: skewY(20deg);
+}
+
+.cajita:nth-child(11):hover {
+    transform: matrix(1,2,-1,1, 80, 80);
+}
