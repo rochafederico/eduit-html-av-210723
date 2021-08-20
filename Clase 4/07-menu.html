@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 400px;
+        }
+
+        nav {
+            transform: translateX(-100px) rotateY(100deg);
+            transform-origin: left;
+            transition: transform 1s ease-in-out;
+        }
+        nav.activo {
+            transform: translateX(0) rotateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <button style="margin-left: 400px;" type="button">Menu</button>
+    <nav>
+        <ul>
+            <li><a href="#Enlace1">Enlace 1</a></li>
+            <li><a href="#Enlace2">Enlace 2</a></li>
+            <li><a href="#Enlace3">Enlace 3</a></li>
+            <li><a href="#Enlace4">Enlace 4</a></li>
+            <li><a href="#Enlace5">Enlace 5</a></li>
+            <li><a href="#Enlace6">Enlace 6</a></li>
+            <li><a href="#Enlace7">Enlace 7</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelector('button').onclick = function (event) {
+            var menu = document.querySelector('nav');
+            if(menu.classList.contains('activo')) {
+                menu.classList.remove('activo')
+            } else {
+                menu.classList.add('activo')
+            }
+        }
+    </script>
+</body>
+
+</html>

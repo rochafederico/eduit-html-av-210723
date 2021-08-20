@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones</title>
+    <style>
+        .cajita {
+            width: 200px;
+            height: 100px;
+            background-color: greenyellow;
+            box-sizing: border-box;
+            /* transition: background-color 1s cubic-bezier(0,1,1,0),
+            height 500ms cubic-bezier(0,.5,.5,0) 1s; */
+            transition-property: background-color, height;
+            transition-duration: 1s, 500ms;
+            transition-timing-function: cubic-bezier(0, 1, 1, 0), cubic-bezier(0, .5, .5, 0);
+            transition-delay: 0, 1s;
+            /* transition: all 1s cubic-bezier(0,1,1,0); */
+        }
+
+        .cajita:hover {
+            background-color: red;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cajita"></div>
+</body>
+
+</html>

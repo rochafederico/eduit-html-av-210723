@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colapsable</title>
+    <style>
+        .colapsable {
+            overflow: hidden;
+            transition: height 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" data-colapsar="contenido-a-mostrar">
+        Mostrar
+    </button>
+    <div id="contenido-a-mostrar" class="colapsable" style="height: 0;">
+        <div class="colapsable-contenido">
+            <h1>Titulo</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, quia dolor! Ex natus velit quisquam
+                ipsa. Ex illum unde magni tenetur asperiores tempore, sunt facilis, vel voluptate libero fuga. Repellat.
+            </p>
+            <p>Dicta dolorum quaerat in repellat, blanditiis perspiciatis unde sed explicabo, beatae itaque fugiat neque
+                voluptatibus tenetur architecto rem, molestiae sapiente nobis rerum assumenda est fugit eos quia. In,
+                nemo inventore?</p>
+        </div>
+    </div>
+    <script>
+        document.querySelector('button').onclick = function (event) {
+            var colapsable = document.getElementById(event.target.dataset.colapsar);
+
+            if (colapsable.clientHeight == 0) {
+                colapsable.style.height = colapsable.querySelector('.colapsable-contenido').clientHeight + "px";
+            } else {
+                colapsable.style.height = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

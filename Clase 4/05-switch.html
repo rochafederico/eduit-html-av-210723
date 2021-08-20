@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        .checkbox {
+            width: 72px;
+            height: 38px;
+            position: relative;
+            display: inline-block;
+            background-color: gray;
+            border-radius: 19px;
+        }
+
+        .checkbox>span {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            display: inline-block;
+            background-color: white;
+            border-radius: 50%;
+            top: 4px;
+            left: 4px;
+
+            transition: left .2s ease-in-out, background-color .2s ease-in-out 0.1s;
+        }
+
+        .checkbox>input {
+            opacity: 0;
+        }
+
+        .checkbox>input:checked + span {
+            left: 38px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <label class="checkbox">
+        <input type="checkbox">
+        <span></span>
+    </label>
+</body>
+
+</html>
