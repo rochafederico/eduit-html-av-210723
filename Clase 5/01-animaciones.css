@@ -1,0 +1,47 @@
+@keyframes miAnimacion {
+    0% {
+        border-radius: 20%;
+    }
+    49% {
+        background-color: red;
+        /* margin-left: 0; */
+    }
+    50% {
+        background-color: cyan;
+        margin-left: 100px;
+    }
+    51% { /* to*/ 
+        background-color: blue;
+    }
+    60% {
+        border-radius: 50%;
+    }
+    to {
+        margin-left: 100px;
+    }
+}
+/*
+-webkit-keyframes
+-moz-keyframes
+-o-keyframes
+-ms-keyframes
+*/
+/* @-webkit-keyframes miAnimacion {
+    0% {
+        background-color: red;
+    }
+    100% { /* to*/ /*
+        background-color: blue;
+    }
+} */
+
+.cajita {
+    height: 200px;
+    width: 200px;
+    background-color: greenyellow;
+
+    animation-name: miAnimacion;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+}

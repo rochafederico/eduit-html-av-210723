@@ -1,0 +1,39 @@
+@keyframes miAnimacion {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: cyan;
+    }
+    to {
+        background-color: blueviolet;
+    }
+}
+
+.cajita {
+    height: 200px;
+    width: 200px;
+    background-color: greenyellow;
+
+    animation-name: miAnimacion;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+
+    animation-iteration-count: 4; /* infinite */
+    animation-direction: alternate-reverse;
+    /* animation-fill-mode: backwards; */
+    /* animation-fill-mode: forwards; */
+    animation-fill-mode: both;
+
+    animation: miAnimacion 1s linear 0 infinite alternate both;
+    animation: miAnimacion 1s linear 0 infinite alternate;
+    animation: miAnimacion 1s linear 0 infinite;
+    animation: miAnimacion 1s linear 0;
+    animation: miAnimacion 1s linear;
+    animation: miAnimacion 1s;
+}
+
+.cajita:hover {
+    animation-play-state: paused;
+}

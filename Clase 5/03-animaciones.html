@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacion con Javascript</title>
+    <link rel="stylesheet" href="03-animaciones.css">
+</head>
+
+<body>
+    <button type="button" onclick="click()">
+        pause/play
+    </button>
+    <div class="cajita">
+    </div>
+
+    <script>
+        const cajita = document.querySelector('.cajita');
+
+        document.querySelector('button').onclick = function () {
+            cajita.style.animationPlayState = "paused";
+        }
+
+        cajita.addEventListener('animationstart', function(e) {
+            console.log('Empezo')
+        })
+        cajita.addEventListener('animationiteration', function(e) {
+            console.log('Itero', e)
+        })
+        cajita.addEventListener('animationend', function(e) {
+            console.log('Termino')
+        })
+    </script>
+</body>
+
+</html>
